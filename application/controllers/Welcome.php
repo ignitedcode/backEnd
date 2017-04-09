@@ -6,18 +6,7 @@ class Welcome extends Application {
 
 	public function index()
 	{
-		$result = '';
-		$oddrow = true;
-		foreach ($this->categories->all() as $category)
-		{
-//			$viewparms = array(
-//				'direction' => ($oddrow ? 'left' : 'right')
-//			);
-//			$viewparms = array_merge($viewparms, $category);
-			$category->direction = ($oddrow ? 'left' : 'right');
-			$result .= $this->parser->parse('category-home', $category, true);
-			$oddrow = ! $oddrow;
-		}
+		$result = "Oops! You're not supposed to be here!";
 		$this->data['content'] = $result;
 		$this->render();
 	}
